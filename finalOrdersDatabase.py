@@ -69,15 +69,15 @@ def fetch_and_store_orders(access_token):
             cursor = conn.cursor()
 
             for order in orders:
-                # print(f"Amazon Order ID: {order.get('AmazonOrderId')}")
-                # print(f"Purchase Date: {order.get('PurchaseDate')}")
-                # print(f"Order Status: {order.get('OrderStatus')}")
-                # print(f"Order Total: {order.get('OrderTotal', {}).get('Amount')} {order.get('OrderTotal', {}).get('CurrencyCode')}")
-                # print(f"Buyer Email: {order.get('BuyerInfo', {}).get('BuyerEmail')}")
-                # print(f"Shipping Address: {order.get('ShippingAddress', {}).get('City')}, {order.get('ShippingAddress', {}).get('StateOrRegion')}, {order.get('ShippingAddress', {}).get('CountryCode')}")
-                # print(f"Ship Service Level: {order.get('ShipServiceLevel')}")
-                # print(f"Last Update Date: {order.get('LastUpdateDate')}")
-                # print("-" * 60)
+                print(f"Amazon Order ID: {order.get('AmazonOrderId')}")
+                print(f"Purchase Date: {order.get('PurchaseDate')}")
+                print(f"Order Status: {order.get('OrderStatus')}")
+                print(f"Order Total: {order.get('OrderTotal', {}).get('Amount')} {order.get('OrderTotal', {}).get('CurrencyCode')}")
+                print(f"Buyer Email: {order.get('BuyerInfo', {}).get('BuyerEmail')}")
+                print(f"Shipping Address: {order.get('ShippingAddress', {}).get('City')}, {order.get('ShippingAddress', {}).get('StateOrRegion')}, {order.get('ShippingAddress', {}).get('CountryCode')}")
+                print(f"Ship Service Level: {order.get('ShipServiceLevel')}")
+                print(f"Last Update Date: {order.get('LastUpdateDate')}")
+                print("-" * 60)
 
                 # Inserting the order into the database
                 insert_query = """
